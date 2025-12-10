@@ -25,7 +25,7 @@ const Hero = () => {
       {/* Technical Background */}
       <div className="absolute inset-0 z-0">
         {/* Base gradient with enhanced colors */}
-        <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-purple-900/30 to-gray-900"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-blue-900/30 to-gray-900"></div>
         <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent"></div>
         
         {/* Technical Circuit Panel Background */}
@@ -224,7 +224,7 @@ const Hero = () => {
           {[...Array(20)].map((_, i) => (
             <div
               key={i}
-              className="absolute w-2 h-2 bg-orange-500 rounded-full opacity-30 animate-float"
+              className="absolute w-2 h-2 bg-blue-600 rounded-full opacity-30 animate-float"
               style={{
                 left: `${Math.random() * 100}%`,
                 top: `${Math.random() * 100}%`,
@@ -264,10 +264,10 @@ const Hero = () => {
             style={{ animationDelay: '0.4s', animationDuration: '1s' }}
           >
             <h1 className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-display font-extrabold text-white leading-tight mb-6 drop-shadow-2xl relative">
-              <span className="relative z-10 bg-gradient-to-r from-white via-purple-100 to-cyan-100 bg-clip-text text-transparent animate-pulse-glow">
+              <span className="relative z-10 bg-gradient-to-r from-white via-blue-100 to-slate-100 bg-clip-text text-transparent animate-pulse-glow">
                 Uslu Teknik
               </span>
-              <span className="absolute inset-0 bg-gradient-to-r from-purple-600 via-cyan-500 to-purple-600 bg-clip-text text-transparent blur-xl opacity-50 animate-pulse"></span>
+              <span className="absolute inset-0 bg-gradient-to-r from-blue-800 via-blue-700 to-blue-800 bg-clip-text text-transparent blur-xl opacity-50 animate-pulse"></span>
             </h1>
           </div>
 
@@ -278,7 +278,7 @@ const Hero = () => {
           >
             <a
               href="#services"
-              className="inline-block border-2 border-white/80 text-white px-10 py-5 rounded-xl font-display font-bold text-lg hover:bg-white hover:text-gray-900 transition-all duration-500 backdrop-blur-md bg-white/10 hover:scale-110 hover:shadow-2xl hover:shadow-purple-500/50 relative overflow-hidden group ripple"
+              className="inline-block border-2 border-white/80 text-white px-10 py-5 rounded-xl font-display font-bold text-lg hover:bg-white hover:text-gray-900 transition-all duration-500 backdrop-blur-md bg-white/10 hover:scale-110 hover:shadow-2xl hover:shadow-blue-800/50 relative overflow-hidden group ripple"
             >
               <span className="relative z-10 flex items-center space-x-2">
                 <span>Hizmetlerimizi Keşfedin</span>
@@ -286,7 +286,7 @@ const Hero = () => {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                 </svg>
               </span>
-              <span className="absolute inset-0 bg-gradient-to-r from-purple-600 via-cyan-500 to-purple-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></span>
+              <span className="absolute inset-0 bg-gradient-to-r from-blue-800 via-blue-700 to-blue-800 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></span>
               <span className="absolute inset-0 bg-white/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
             </a>
           </div>

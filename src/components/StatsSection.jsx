@@ -127,7 +127,7 @@ const StatsSection = () => {
   };
 
   return (
-    <section ref={sectionRef} className="py-20 md:py-32 bg-gradient-to-br from-orange-500 via-orange-400 to-orange-600 relative overflow-hidden">
+    <section ref={sectionRef} className="py-20 md:py-32 bg-gradient-to-br from-slate-700 via-slate-600 to-slate-800 relative overflow-hidden">
       {/* Turkey Map Background with animation */}
       <div className="absolute inset-0 opacity-10">
         <svg className="w-full h-full animate-pulse-slow" viewBox="0 0 400 200" preserveAspectRatio="xMidYMid meet">
@@ -148,7 +148,7 @@ const StatsSection = () => {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-10">
         <div className={`text-center mb-16 md:mb-20 ${isVisible ? 'animate-fade-in' : 'opacity-0'}`}>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-white mb-4 drop-shadow-lg">
-            Türkiye'nin <span className="text-yellow-200">81 İlinde</span>
+            Türkiye'nin <span className="text-blue-300">81 İlinde</span>
           </h2>
           <h3 className="text-2xl md:text-3xl lg:text-4xl font-display font-bold text-white mb-8 drop-shadow-md">
             İşinizi Yaşıyor ve Yaşatıyoruz

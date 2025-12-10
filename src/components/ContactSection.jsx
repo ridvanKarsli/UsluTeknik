@@ -64,7 +64,7 @@ const ContactSection = () => {
           Detaylı adres bilgisi için iletişime geçin
         </>
       ),
-      gradient: 'from-blue-500 to-cyan-500',
+      gradient: 'from-blue-700 to-blue-600',
     },
     {
       icon: (
@@ -75,8 +75,8 @@ const ContactSection = () => {
       title: 'Telefon',
       content: (
         <>
-          <a href="tel:+902121234567" className="hover:text-cyan-600 transition-colors">+90 (212) 123 45 67</a><br />
-          <a href="tel:+905551234567" className="hover:text-cyan-600 transition-colors">+90 (555) 123 45 67</a>
+          <a href="tel:+902121234567" className="hover:text-blue-700 transition-colors">+90 (212) XXX XX XX</a><br />
+          <a href="tel:+905551234567" className="hover:text-blue-700 transition-colors">+90 (555) XXX XX XX</a>
         </>
       ),
       gradient: 'from-blue-500 to-blue-600',
@@ -90,8 +90,8 @@ const ContactSection = () => {
       title: 'E-posta',
       content: (
         <>
-          <a href="mailto:info@usluteknik.com.tr" className="hover:text-cyan-600 transition-colors">info@usluteknik.com.tr</a><br />
-          <a href="mailto:destek@usluteknik.com.tr" className="hover:text-cyan-600 transition-colors">destek@usluteknik.com.tr</a>
+          <a href="mailto:info@usluteknik.com.tr" className="hover:text-blue-700 transition-colors">info@usluteknik.com.tr</a><br />
+          <a href="mailto:destek@usluteknik.com.tr" className="hover:text-blue-700 transition-colors">destek@usluteknik.com.tr</a>
         </>
       ),
       gradient: 'from-blue-500 to-blue-600',
@@ -101,14 +101,14 @@ const ContactSection = () => {
   return (
     <section id="contact" ref={sectionRef} className="py-20 md:py-32 bg-gradient-to-b from-white via-gray-50 to-white relative overflow-hidden">
       {/* Background Decoration */}
-      <div className="absolute top-0 right-0 w-96 h-96 bg-purple-200 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-pulse-slow"></div>
-      <div className="absolute bottom-0 left-0 w-96 h-96 bg-cyan-200 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-pulse-slow" style={{ animationDelay: '1s' }}></div>
-      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-purple-100 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse-slow" style={{ animationDelay: '0.5s' }}></div>
+      <div className="absolute top-0 right-0 w-96 h-96 bg-blue-200 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-pulse-slow"></div>
+      <div className="absolute bottom-0 left-0 w-96 h-96 bg-slate-200 rounded-full mix-blend-multiply filter blur-3xl opacity-30 animate-pulse-slow" style={{ animationDelay: '1s' }}></div>
+      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-blue-100 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse-slow" style={{ animationDelay: '0.5s' }}></div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className={`text-center mb-16 md:mb-20 ${isVisible ? 'animate-fade-in' : 'opacity-0'}`}>
-          <div className="inline-block mb-6 px-4 py-2 bg-gradient-to-r from-purple-100 to-cyan-100 rounded-full">
+          <div className="inline-block mb-6 px-4 py-2 bg-gradient-to-r from-blue-100 to-slate-100 rounded-full">
             <span className="text-gradient-purple font-bold text-sm uppercase tracking-wider">İletişim</span>
           </div>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-sans font-bold text-gray-900 mb-6">
@@ -117,14 +117,14 @@ const ContactSection = () => {
           <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
             Size nasıl yardımcı olabiliriz? Bizimle iletişime geçin, birlikte çözüm üretelim
           </p>
-          <div className="w-24 h-1 bg-gradient-to-r from-purple-500 to-cyan-500 mx-auto mt-6 rounded-full"></div>
+          <div className="w-24 h-1 bg-gradient-to-r from-blue-800 to-blue-700 mx-auto mt-6 rounded-full"></div>
         </div>
 
         <div className="grid md:grid-cols-2 gap-8 md:gap-12">
           {/* Contact Info */}
           <div className={`space-y-6 ${isVisible ? 'animate-slide-in-left' : 'opacity-0'}`}>
             <h3 className="text-2xl font-sans font-bold text-gray-900 mb-6 flex items-center">
-              <svg className="w-6 h-6 mr-2 text-cyan-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-6 h-6 mr-2 text-blue-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
               İletişim Bilgileri
@@ -133,10 +133,10 @@ const ContactSection = () => {
             {contactInfo.map((info, index) => (
               <div
                 key={index}
-                className={`group relative bg-white border-2 border-gray-200 rounded-2xl p-6 hover:border-cyan-500 hover:shadow-xl card-hover transition-all duration-300 overflow-hidden ${isVisible ? 'animate-fade-in' : 'opacity-0'}`}
+                className={`group relative bg-white border-2 border-gray-200 rounded-2xl p-6 hover:border-blue-700 hover:shadow-xl card-hover transition-all duration-300 overflow-hidden ${isVisible ? 'animate-fade-in' : 'opacity-0'}`}
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <div className="absolute inset-0 bg-gradient-to-br from-purple-50 to-cyan-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-50 to-slate-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 <div className="flex items-start relative z-10">
                   <div className="flex-shrink-0">
                     <div className={`relative bg-gradient-to-br ${info.gradient} rounded-xl p-4 text-white group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 shadow-lg`}>
@@ -158,11 +158,11 @@ const ContactSection = () => {
 
             {/* Working Hours */}
             <div 
-              className={`bg-gradient-to-br from-cyan-50 via-purple-50 to-cyan-100 border-2 border-cyan-200 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover-lift ${isVisible ? 'animate-fade-in' : 'opacity-0'}`} 
+              className={`bg-gradient-to-br from-blue-50 via-slate-50 to-blue-100 border-2 border-blue-200 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover-lift ${isVisible ? 'animate-fade-in' : 'opacity-0'}`} 
               style={{ animationDelay: '0.3s' }}
             >
               <div className="flex items-center mb-4">
-                <div className="bg-cyan-500 rounded-lg p-2 mr-3">
+                <div className="bg-blue-700 rounded-lg p-2 mr-3">
                   <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                   </svg>
@@ -172,30 +172,30 @@ const ContactSection = () => {
               <div className="space-y-3 text-gray-700">
                 <div className="flex justify-between items-center p-2 rounded-lg hover:bg-white/50 transition-colors duration-300">
                   <span className="flex items-center">
-                    <svg className="w-4 h-4 mr-2 text-cyan-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-4 h-4 mr-2 text-blue-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
                     </svg>
                     Pazartesi - Cuma
                   </span>
-                  <span className="font-semibold text-cyan-600">08:00 - 18:00</span>
+                  <span className="font-semibold text-blue-700">08:00 - 18:00</span>
                 </div>
                 <div className="flex justify-between items-center p-2 rounded-lg hover:bg-white/50 transition-colors duration-300">
                   <span className="flex items-center">
-                    <svg className="w-4 h-4 mr-2 text-cyan-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-4 h-4 mr-2 text-blue-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
                     </svg>
                     Cumartesi
                   </span>
-                  <span className="font-semibold text-cyan-600">09:00 - 14:00</span>
+                  <span className="font-semibold text-blue-700">09:00 - 14:00</span>
                 </div>
-                <div className="flex justify-between items-center p-2 rounded-lg bg-purple-600/10 border border-cyan-200">
-                  <span className="flex items-center text-cyan-700 font-semibold">
+                <div className="flex justify-between items-center p-2 rounded-lg bg-blue-800/10 border border-blue-200">
+                  <span className="flex items-center text-blue-800 font-semibold">
                     <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
                     Pazar
                   </span>
-                  <span className="font-bold text-cyan-600">7/24 Acil Destek</span>
+                  <span className="font-bold text-blue-700">7/24 Acil Destek</span>
                 </div>
               </div>
             </div>
@@ -204,7 +204,7 @@ const ContactSection = () => {
           {/* Contact Form */}
           <div className={`${isVisible ? 'animate-slide-in-right' : 'opacity-0'}`} style={{ animationDelay: '0.2s' }}>
             <h3 className="text-2xl font-semibold text-gray-900 mb-6 flex items-center">
-              <svg className="w-6 h-6 mr-2 text-cyan-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-6 h-6 mr-2 text-blue-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
               </svg>
               Bize Ulaşın
@@ -213,7 +213,7 @@ const ContactSection = () => {
               <div className="relative">
                 <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
                     <span className="flex items-center">
-                      <svg className="w-4 h-4 mr-1 text-cyan-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <svg className="w-4 h-4 mr-1 text-blue-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
                       </svg>
                       Ad Soyad *
@@ -228,7 +228,7 @@ const ContactSection = () => {
                   onChange={handleChange}
                   onFocus={() => setFocusedField('name')}
                   onBlur={() => setFocusedField(null)}
-                  className={`w-full px-4 py-3 border-2 rounded-lg transition-all duration-300 outline-none ${focusedField === 'name' ? 'border-cyan-500 ring-4 ring-cyan-200 bg-purple-50' : 'border-gray-300 focus:border-cyan-500 focus:ring-4 focus:ring-cyan-200'}`}
+                  className={`w-full px-4 py-3 border-2 rounded-lg transition-all duration-300 outline-none ${focusedField === 'name' ? 'border-blue-700 ring-4 ring-blue-200 bg-blue-50' : 'border-gray-300 focus:border-blue-700 focus:ring-4 focus:ring-blue-200'}`}
                   placeholder="Adınız ve soyadınız"
                 />
               </div>
@@ -237,7 +237,7 @@ const ContactSection = () => {
                 <div className="relative">
                   <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
                     <span className="flex items-center">
-                      <svg className="w-4 h-4 mr-1 text-cyan-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <svg className="w-4 h-4 mr-1 text-blue-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                       </svg>
                       E-posta *
@@ -252,7 +252,7 @@ const ContactSection = () => {
                     onChange={handleChange}
                     onFocus={() => setFocusedField('email')}
                     onBlur={() => setFocusedField(null)}
-                    className={`w-full px-4 py-3 border-2 rounded-lg transition-all duration-300 outline-none ${focusedField === 'email' ? 'border-cyan-500 ring-4 ring-cyan-200 bg-purple-50' : 'border-gray-300 focus:border-cyan-500 focus:ring-4 focus:ring-cyan-200'}`}
+                    className={`w-full px-4 py-3 border-2 rounded-lg transition-all duration-300 outline-none ${focusedField === 'email' ? 'border-blue-700 ring-4 ring-blue-200 bg-blue-50' : 'border-gray-300 focus:border-blue-700 focus:ring-4 focus:ring-blue-200'}`}
                     placeholder="ornek@email.com"
                   />
                 </div>
@@ -260,7 +260,7 @@ const ContactSection = () => {
                 <div className="relative">
                   <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
                     <span className="flex items-center">
-                      <svg className="w-4 h-4 mr-1 text-cyan-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <svg className="w-4 h-4 mr-1 text-blue-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                       </svg>
                       Telefon
@@ -274,7 +274,7 @@ const ContactSection = () => {
                     onChange={handleChange}
                     onFocus={() => setFocusedField('phone')}
                     onBlur={() => setFocusedField(null)}
-                    className={`w-full px-4 py-3 border-2 rounded-lg transition-all duration-300 outline-none ${focusedField === 'phone' ? 'border-cyan-500 ring-4 ring-cyan-200 bg-purple-50' : 'border-gray-300 focus:border-cyan-500 focus:ring-4 focus:ring-cyan-200'}`}
+                    className={`w-full px-4 py-3 border-2 rounded-lg transition-all duration-300 outline-none ${focusedField === 'phone' ? 'border-blue-700 ring-4 ring-blue-200 bg-blue-50' : 'border-gray-300 focus:border-blue-700 focus:ring-4 focus:ring-blue-200'}`}
                     placeholder="+90 555 123 45 67"
                   />
                 </div>
@@ -283,7 +283,7 @@ const ContactSection = () => {
               <div className="relative">
                 <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
                   <span className="flex items-center">
-                    <svg className="w-4 h-4 mr-1 text-cyan-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-4 h-4 mr-1 text-blue-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
                     </svg>
                     Şirket Adı
@@ -297,7 +297,7 @@ const ContactSection = () => {
                   onChange={handleChange}
                   onFocus={() => setFocusedField('company')}
                   onBlur={() => setFocusedField(null)}
-                  className={`w-full px-4 py-3 border-2 rounded-lg transition-all duration-300 outline-none ${focusedField === 'company' ? 'border-cyan-500 ring-4 ring-cyan-200 bg-purple-50' : 'border-gray-300 focus:border-cyan-500 focus:ring-4 focus:ring-cyan-200'}`}
+                  className={`w-full px-4 py-3 border-2 rounded-lg transition-all duration-300 outline-none ${focusedField === 'company' ? 'border-blue-700 ring-4 ring-blue-200 bg-blue-50' : 'border-gray-300 focus:border-blue-700 focus:ring-4 focus:ring-blue-200'}`}
                   placeholder="Şirket adınız"
                 />
               </div>
@@ -305,7 +305,7 @@ const ContactSection = () => {
               <div className="relative">
                 <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
                   <span className="flex items-center">
-                    <svg className="w-4 h-4 mr-1 text-cyan-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-4 h-4 mr-1 text-blue-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
                     </svg>
                     Mesajınız *
@@ -320,14 +320,14 @@ const ContactSection = () => {
                   onChange={handleChange}
                   onFocus={() => setFocusedField('message')}
                   onBlur={() => setFocusedField(null)}
-                  className={`w-full px-4 py-3 border-2 rounded-lg transition-all duration-300 outline-none resize-none ${focusedField === 'message' ? 'border-cyan-500 ring-4 ring-cyan-200 bg-purple-50' : 'border-gray-300 focus:border-cyan-500 focus:ring-4 focus:ring-cyan-200'}`}
+                  className={`w-full px-4 py-3 border-2 rounded-lg transition-all duration-300 outline-none resize-none ${focusedField === 'message' ? 'border-blue-700 ring-4 ring-blue-200 bg-blue-50' : 'border-gray-300 focus:border-blue-700 focus:ring-4 focus:ring-blue-200'}`}
                   placeholder="Mesajınızı buraya yazın..."
                 />
               </div>
 
               <button
                 type="submit"
-                className="group relative w-full bg-gradient-to-r from-purple-600 via-purple-500 to-cyan-500 text-white px-8 py-5 rounded-xl font-sans font-bold text-lg overflow-hidden hover:from-purple-700 hover:via-purple-600 hover:to-cyan-600 transition-all duration-500 shadow-xl hover:shadow-2xl transform hover:scale-105 ripple"
+                className="group relative w-full bg-gradient-to-r from-blue-800 via-blue-700 to-blue-600 text-white px-8 py-5 rounded-xl font-sans font-bold text-lg overflow-hidden hover:from-blue-900 hover:via-blue-800 hover:to-blue-700 transition-all duration-500 shadow-xl hover:shadow-2xl transform hover:scale-105 ripple"
               >
                 <span className="relative z-10 flex items-center justify-center">
                   <svg className="w-5 h-5 mr-2 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">

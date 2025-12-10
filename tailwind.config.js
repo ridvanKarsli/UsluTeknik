@@ -81,11 +81,11 @@ export default {
         '9xl': ['8rem', { lineHeight: '1' }],
       },
       boxShadow: {
-        'glow': '0 0 20px rgba(147, 51, 234, 0.5)',
-        'glow-lg': '0 0 40px rgba(147, 51, 234, 0.6)',
-        'glow-orange': '0 0 30px rgba(249, 115, 22, 0.5)',
-        'glow-cyan': '0 0 30px rgba(6, 182, 212, 0.5)',
-        'inner-glow': 'inset 0 0 20px rgba(147, 51, 234, 0.3)',
+        'glow': '0 0 20px rgba(30, 58, 138, 0.4)',
+        'glow-lg': '0 0 40px rgba(30, 58, 138, 0.5)',
+        'glow-orange': '0 0 30px rgba(55, 65, 81, 0.4)',
+        'glow-cyan': '0 0 30px rgba(37, 99, 235, 0.4)',
+        'inner-glow': 'inset 0 0 20px rgba(30, 58, 138, 0.2)',
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
@@ -124,8 +124,8 @@ export default {
           '50%': { transform: 'translateY(-20px)' },
         },
         glow: {
-          '0%': { boxShadow: '0 0 5px rgba(147, 51, 234, 0.5)' },
-          '100%': { boxShadow: '0 0 20px rgba(147, 51, 234, 0.8), 0 0 30px rgba(147, 51, 234, 0.6)' },
+          '0%': { boxShadow: '0 0 5px rgba(30, 58, 138, 0.4)' },
+          '100%': { boxShadow: '0 0 20px rgba(30, 58, 138, 0.6), 0 0 30px rgba(30, 58, 138, 0.4)' },
         },
       },
     },

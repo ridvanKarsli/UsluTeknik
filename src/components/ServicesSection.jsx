@@ -22,7 +22,7 @@ const ServicesSection = () => {
   }, []);
 
   return (
-    <section id="services" ref={sectionRef} className="py-20 md:py-32 bg-gradient-to-br from-orange-500 via-orange-400 to-orange-600 relative overflow-hidden">
+    <section id="services" ref={sectionRef} className="py-20 md:py-32 bg-gradient-to-br from-slate-700 via-slate-600 to-slate-800 relative overflow-hidden">
       {/* Background decorations */}
       <div className="absolute top-0 right-0 w-96 h-96 bg-white/10 rounded-full blur-3xl"></div>
       <div className="absolute bottom-0 left-0 w-96 h-96 bg-white/10 rounded-full blur-3xl"></div>
@@ -32,7 +32,7 @@ const ServicesSection = () => {
           {/* Left Column - Main Message */}
           <div className={`md:col-span-1 ${isVisible ? 'animate-fade-in' : 'opacity-0'}`}>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-white mb-8 leading-tight drop-shadow-lg">
-              İşimiz, <strong className="text-yellow-200">Yaşam Mühendisliği</strong>
+              İşimiz, <strong className="text-blue-300">Yaşam Mühendisliği</strong>
             </h2>
             <div className="space-y-5 text-white/95 text-base md:text-lg leading-relaxed">
               <p className="relative pl-4 border-l-2 border-white/30 hover:border-white/60 transition-colors duration-300">
@@ -45,7 +45,7 @@ const ServicesSection = () => {
                 Uslu Teknik olarak görevimiz, müşterilerimizin teknik altyapılarını güvenli ve verimli şekilde çalışır durumda tutmak.
               </p>
               <p className="relative pl-4 border-l-2 border-white/30 hover:border-white/60 transition-colors duration-300">
-                Biz, sadece teknik hizmet sunmuyor, aynı zamanda <strong className="text-yellow-200">uzun vadeli çözümler</strong> üretiyoruz. Sadece acil müdahale yapmıyor, aynı zamanda önleyici bakım ve danışmanlık hizmetleriyle geleceği planlıyoruz.
+                Biz, sadece teknik hizmet sunmuyor, aynı zamanda <strong className="text-blue-300">uzun vadeli çözümler</strong> üretiyoruz. Sadece acil müdahale yapmıyor, aynı zamanda önleyici bakım ve danışmanlık hizmetleriyle geleceği planlıyoruz.
               </p>
             </div>
           </div>

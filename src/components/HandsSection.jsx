@@ -25,7 +25,7 @@ const HandsSection = () => {
     <section id="hands" ref={sectionRef} className="relative overflow-hidden min-h-[600px] md:min-h-[700px] flex items-center">
       {/* Technical Background - Circuit Panel */}
       <div className="absolute inset-0 z-0">
-        <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-purple-900/40 to-gray-900">
+        <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-blue-900/40 to-gray-900">
           {/* Animated gradient overlay */}
           <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/40"></div>
           
@@ -87,10 +87,10 @@ const HandsSection = () => {
             El emeğinin önemine inanır, değerini bulması konusunda ön ayak oluruz.
           </p>
           <h2 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-display font-extrabold text-white mb-12 leading-tight drop-shadow-2xl relative">
-            <span className="relative z-10 bg-gradient-to-r from-white via-purple-100 to-cyan-100 bg-clip-text text-transparent">
+            <span className="relative z-10 bg-gradient-to-r from-white via-blue-100 to-slate-100 bg-clip-text text-transparent">
               Yaşam akışını mümkün kılan ellere sahip çıkıyoruz.
             </span>
-            <span className="absolute inset-0 bg-gradient-to-r from-purple-600 via-cyan-500 to-purple-600 bg-clip-text text-transparent blur-xl opacity-50 -z-10"></span>
+            <span className="absolute inset-0 bg-gradient-to-r from-blue-800 via-blue-700 to-blue-800 bg-clip-text text-transparent blur-xl opacity-50 -z-10"></span>
           </h2>
           
           {/* CTA Button */}
@@ -104,7 +104,7 @@ const HandsSection = () => {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
               </svg>
             </span>
-            <span className="absolute inset-0 bg-gradient-to-r from-purple-600 via-cyan-500 to-purple-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></span>
+            <span className="absolute inset-0 bg-gradient-to-r from-blue-800 via-blue-700 to-blue-800 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></span>
             <span className="absolute inset-0 bg-white/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
           </a>
         </div>

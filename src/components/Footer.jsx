@@ -24,8 +24,8 @@ const Footer = () => {
   return (
     <footer className="bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 text-gray-300 relative overflow-hidden">
       {/* Decorative elements */}
-      <div className="absolute top-0 left-0 w-96 h-96 bg-purple-900/20 rounded-full blur-3xl"></div>
-      <div className="absolute bottom-0 right-0 w-96 h-96 bg-cyan-900/20 rounded-full blur-3xl"></div>
+      <div className="absolute top-0 left-0 w-96 h-96 bg-blue-900/20 rounded-full blur-3xl"></div>
+      <div className="absolute bottom-0 right-0 w-96 h-96 bg-slate-900/20 rounded-full blur-3xl"></div>
       
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16 z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12">
@@ -33,8 +33,8 @@ const Footer = () => {
           <div className="lg:col-span-2">
             <div className="flex items-center space-x-3 mb-6">
               <div className="relative">
-                <div className="absolute inset-0 bg-gradient-to-br from-purple-600 to-cyan-500 rounded-full blur-md opacity-50"></div>
-                <svg className="w-12 h-12 text-purple-400 relative z-10" viewBox="0 0 24 24" fill="currentColor">
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-800 to-blue-700 rounded-full blur-md opacity-50"></div>
+                <svg className="w-12 h-12 text-blue-500 relative z-10" viewBox="0 0 24 24" fill="currentColor">
                   <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="2" fill="none"/>
                   <circle cx="12" cy="12" r="6" stroke="currentColor" strokeWidth="2" fill="none"/>
                   <circle cx="12" cy="12" r="2" fill="currentColor"/>
@@ -42,7 +42,7 @@ const Footer = () => {
                 </svg>
               </div>
               <div>
-                <h3 className="text-xl md:text-2xl font-display font-bold bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">Uslu Teknik</h3>
+                <h3 className="text-xl md:text-2xl font-display font-bold bg-gradient-to-r from-blue-500 to-blue-400 bg-clip-text text-transparent">Uslu Teknik</h3>
                 <p className="text-xs text-gray-500 uppercase tracking-wider">Elektrik & Mekanik</p>
               </div>
             </div>
@@ -53,22 +53,22 @@ const Footer = () => {
             </p>
             <div className="space-y-3 text-sm mb-6">
               <p className="text-gray-400 flex items-center">
-                <svg className="w-4 h-4 mr-2 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-4 h-4 mr-2 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                 </svg>
-                Email: <a href="mailto:info@usluteknik.com.tr" className="text-white hover:text-purple-400 transition-colors ml-1">info@usluteknik.com.tr</a>
+                Email: <a href="mailto:info@usluteknik.com.tr" className="text-white hover:text-blue-400 transition-colors ml-1">info@usluteknik.com.tr</a>
               </p>
               <p className="text-gray-400 flex items-center">
-                <svg className="w-4 h-4 mr-2 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-4 h-4 mr-2 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                 </svg>
-                Telefon: <a href="tel:+902121234567" className="text-white hover:text-purple-400 transition-colors ml-1">+90 (212) XXX XX XX</a>
+                Telefon: <a href="tel:+902121234567" className="text-white hover:text-blue-400 transition-colors ml-1">+90 (212) XXX XX XX</a>
               </p>
               <p className="text-gray-400 flex items-center">
-                <svg className="w-4 h-4 mr-2 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-4 h-4 mr-2 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                 </svg>
-                Destek: <a href="mailto:destek@usluteknik.com.tr" className="text-white hover:text-purple-400 transition-colors ml-1">destek@usluteknik.com.tr</a>
+                Destek: <a href="mailto:destek@usluteknik.com.tr" className="text-white hover:text-blue-400 transition-colors ml-1">destek@usluteknik.com.tr</a>
               </p>
             </div>
             
@@ -78,7 +78,7 @@ const Footer = () => {
                 <a
                   key={index}
                   href={social.href}
-                  className="w-10 h-10 bg-gray-800 hover:bg-gradient-to-br hover:from-purple-600 hover:to-cyan-500 rounded-lg flex items-center justify-center transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-purple-500/50 group"
+                  className="w-10 h-10 bg-gray-800 hover:bg-gradient-to-br hover:from-blue-700 hover:to-blue-600 rounded-lg flex items-center justify-center transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-blue-700/50 group"
                   aria-label={social.name}
                 >
                   <svg className="w-5 h-5 text-gray-400 group-hover:text-white transition-colors" fill="currentColor" viewBox="0 0 24 24">
@@ -100,9 +100,9 @@ const Footer = () => {
                   <li key={linkIndex}>
                     <a
                       href={link.href}
-                      className="text-gray-400 hover:text-purple-400 transition-all duration-300 flex items-center group"
+                      className="text-gray-400 hover:text-blue-400 transition-all duration-300 flex items-center group"
                     >
-                      <span className="w-0 h-0.5 bg-gradient-to-r from-purple-400 to-cyan-400 group-hover:w-4 transition-all duration-300 mr-0 group-hover:mr-2"></span>
+                      <span className="w-0 h-0.5 bg-gradient-to-r from-blue-500 to-blue-400 group-hover:w-4 transition-all duration-300 mr-0 group-hover:mr-2"></span>
                       {link.name}
                     </a>
                   </li>
