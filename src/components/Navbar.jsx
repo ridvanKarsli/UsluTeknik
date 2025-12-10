@@ -19,48 +19,55 @@ const Navbar = () => {
   return (
     <>
       {/* Top Search Bar */}
-      <div className="fixed top-0 left-0 right-0 z-50 bg-white border-b border-gray-200 h-8 flex items-center justify-end px-4">
-        <button className="text-gray-600 hover:text-gray-900">
-          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <div className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 border-b border-gray-700/50 h-9 flex items-center justify-end px-4 md:px-8 shadow-lg">
+        <button className="text-gray-300 hover:text-white transition-all duration-300 hover:scale-110 group relative">
+          <svg className="w-5 h-5 group-hover:text-cyan-400 transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
           </svg>
+          <span className="absolute -top-1 -right-1 w-2 h-2 bg-cyan-400 rounded-full opacity-0 group-hover:opacity-100 transition-opacity animate-pulse"></span>
         </button>
       </div>
 
       {/* Main Navigation */}
-      <nav className={`fixed top-8 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-white/95 backdrop-blur-md shadow-lg' : 'bg-white'
+      <nav className={`fixed top-9 left-0 right-0 z-50 transition-all duration-500 ease-out ${
+        isScrolled 
+          ? 'bg-white/98 backdrop-blur-xl shadow-xl border-b border-gray-200/50' 
+          : 'bg-white/95 backdrop-blur-sm shadow-md'
       }`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-20">
             {/* Logo */}
-            <div className="flex-shrink-0 flex items-center space-x-3">
+            <div className="flex-shrink-0 flex items-center space-x-3 group cursor-pointer">
               <div className="relative">
-                <svg className="w-10 h-10 text-purple-600" viewBox="0 0 24 24" fill="currentColor">
-                  <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="2" fill="none"/>
+                <div className="absolute inset-0 bg-gradient-to-br from-purple-600 to-cyan-500 rounded-full blur-md opacity-50 group-hover:opacity-75 transition-opacity duration-300"></div>
+                <svg className="w-12 h-12 text-purple-600 relative z-10 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300" viewBox="0 0 24 24" fill="currentColor">
+                  <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="2" fill="none" className="animate-pulse-slow"/>
                   <circle cx="12" cy="12" r="6" stroke="currentColor" strokeWidth="2" fill="none"/>
                   <circle cx="12" cy="12" r="2" fill="currentColor"/>
                   <path d="M12 2 L12 6 M12 18 L12 22 M2 12 L6 12 M18 12 L22 12" stroke="currentColor" strokeWidth="2"/>
                 </svg>
               </div>
               <div>
-                <div className="text-xl font-bold text-purple-600">PROASİST</div>
-                <div className="text-xs text-purple-500">TEKNİK HİZMETLER</div>
+                <div className="text-xl md:text-2xl font-display font-bold bg-gradient-to-r from-purple-600 via-purple-500 to-cyan-600 bg-clip-text text-transparent group-hover:from-purple-700 group-hover:to-cyan-700 transition-all duration-300">
+                  PROASİST
+                </div>
+                <div className="text-[10px] md:text-xs font-medium text-gray-600 uppercase tracking-wider">TEKNİK HİZMETLER</div>
               </div>
             </div>
 
             {/* Language Selection & Navigation */}
-            <div className="hidden lg:flex lg:items-center lg:space-x-6">
+            <div className="hidden lg:flex lg:items-center lg:space-x-8">
               {/* Language Flags */}
-              <div className="flex items-center space-x-2">
-                <button className="w-6 h-4 border-2 border-purple-600">
+              <div className="flex items-center space-x-3 px-3 py-1.5 rounded-lg bg-gray-50 hover:bg-gray-100 transition-colors duration-300">
+                <button className="w-7 h-5 border-2 border-purple-600 rounded-sm shadow-sm hover:scale-110 transition-transform duration-300 relative overflow-hidden group">
                   <svg viewBox="0 0 3 2" className="w-full h-full">
                     <rect width="3" height="2" fill="#E30A17"/>
                     <circle cx="1.5" cy="1" r="0.4" fill="white"/>
                     <path d="M1.5 0.6 L1.7 0.8 L1.5 1 L1.3 0.8 Z" fill="white"/>
                   </svg>
+                  <div className="absolute inset-0 bg-white/20 opacity-0 group-hover:opacity-100 transition-opacity"></div>
                 </button>
-                <button className="w-6 h-4 opacity-50">
+                <button className="w-7 h-5 opacity-60 hover:opacity-100 rounded-sm shadow-sm hover:scale-110 transition-all duration-300">
                   <svg viewBox="0 0 3 2" className="w-full h-full">
                     <rect width="3" height="1" fill="#B22234"/>
                     <rect y="1" width="3" height="1" fill="#FFFFFF"/>
@@ -71,36 +78,41 @@ const Navbar = () => {
               </div>
 
               {/* Navigation Links */}
-              <a href="#home" className="text-gray-800 hover:text-purple-600 font-medium text-sm uppercase transition-colors">
-                PROASİST
+              <a href="#home" className="relative text-gray-800 hover:text-purple-600 font-semibold text-sm uppercase tracking-wide transition-all duration-300 group">
+                <span className="relative z-10">PROASİST</span>
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-600 to-cyan-500 group-hover:w-full transition-all duration-300"></span>
               </a>
-              <a href="#clients" className="text-gray-800 hover:text-purple-600 font-medium text-sm uppercase transition-colors">
-                MÜŞTERİLERİMİZ
+              <a href="#clients" className="relative text-gray-800 hover:text-purple-600 font-semibold text-sm uppercase tracking-wide transition-all duration-300 group">
+                <span className="relative z-10">MÜŞTERİLERİMİZ</span>
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-600 to-cyan-500 group-hover:w-full transition-all duration-300"></span>
               </a>
-              <a href="#partners" className="text-gray-800 hover:text-purple-600 font-medium text-sm uppercase transition-colors">
-                ÇÖZÜM ORTAKLARI BAŞVURU FORMU
+              <a href="#partners" className="relative text-gray-800 hover:text-purple-600 font-semibold text-sm uppercase tracking-wide transition-all duration-300 group">
+                <span className="relative z-10">ÇÖZÜM ORTAKLARI</span>
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-purple-600 to-cyan-500 group-hover:w-full transition-all duration-300"></span>
               </a>
             </div>
 
             {/* Right Side - Search & Omega Grup */}
             <div className="hidden lg:flex lg:items-center lg:space-x-4">
-              <button className="text-gray-600 hover:text-gray-900">
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <button className="relative text-gray-600 hover:text-purple-600 transition-all duration-300 p-2 rounded-lg hover:bg-purple-50 group">
+                <svg className="w-5 h-5 group-hover:scale-110 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                 </svg>
+                <span className="absolute top-1 right-1 w-2 h-2 bg-cyan-400 rounded-full opacity-0 group-hover:opacity-100 transition-opacity animate-pulse"></span>
               </button>
               
               {/* Omega Grup Logo */}
-              <a href="#" className="flex items-center space-x-2 bg-blue-900 px-4 py-2 rounded">
-                <div className="flex space-x-1">
-                  <div className="w-3 h-3 bg-red-500"></div>
-                  <div className="w-3 h-3 bg-orange-500"></div>
-                  <div className="w-3 h-3 bg-blue-400"></div>
-                  <div className="w-3 h-3 bg-blue-600"></div>
+              <a href="#" className="group flex items-center space-x-3 bg-gradient-to-r from-blue-900 via-blue-800 to-blue-900 px-5 py-2.5 rounded-lg shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 overflow-hidden relative">
+                <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-cyan-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="flex space-x-1.5 relative z-10">
+                  <div className="w-3 h-3 bg-red-500 rounded-sm shadow-sm animate-pulse"></div>
+                  <div className="w-3 h-3 bg-orange-500 rounded-sm shadow-sm animate-pulse" style={{ animationDelay: '0.1s' }}></div>
+                  <div className="w-3 h-3 bg-blue-400 rounded-sm shadow-sm animate-pulse" style={{ animationDelay: '0.2s' }}></div>
+                  <div className="w-3 h-3 bg-cyan-500 rounded-sm shadow-sm animate-pulse" style={{ animationDelay: '0.3s' }}></div>
                 </div>
-                <div className="text-white">
-                  <div className="text-xs font-bold">OMEGA GRUP</div>
-                  <div className="text-[10px]">ÇÖZÜM PLATFORMU</div>
+                <div className="text-white relative z-10">
+                  <div className="text-xs font-bold tracking-wide">OMEGA GRUP</div>
+                  <div className="text-[10px] opacity-90">ÇÖZÜM PLATFORMU</div>
                 </div>
               </a>
             </div>
@@ -109,16 +121,17 @@ const Navbar = () => {
             <div className="lg:hidden">
               <button
                 onClick={toggleMenu}
-                className="inline-flex items-center justify-center p-2 rounded-md text-gray-600 hover:text-gray-900 hover:bg-gray-100 transition-all duration-300"
+                className="relative inline-flex items-center justify-center p-2.5 rounded-lg text-gray-700 hover:text-purple-600 hover:bg-purple-50 transition-all duration-300 group"
+                aria-label="Ana menüyü aç"
               >
-                <span className="sr-only">Ana menüyü aç</span>
+                <span className="absolute inset-0 rounded-lg bg-gradient-to-r from-purple-600 to-cyan-500 opacity-0 group-hover:opacity-10 transition-opacity"></span>
                 {!isMenuOpen ? (
-                  <svg className="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                  <svg className="block h-6 w-6 relative z-10 transform group-hover:rotate-90 transition-transform duration-300" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M4 6h16M4 12h16M4 18h16" />
                   </svg>
                 ) : (
-                  <svg className="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                  <svg className="block h-6 w-6 relative z-10 transform rotate-90 transition-transform duration-300" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M6 18L18 6M6 6l12 12" />
                   </svg>
                 )}
               </button>
@@ -127,30 +140,30 @@ const Navbar = () => {
         </div>
 
         {/* Mobile menu */}
-        <div className={`lg:hidden bg-white border-t border-gray-200 transition-all duration-300 overflow-hidden ${
+        <div className={`lg:hidden bg-white/98 backdrop-blur-xl border-t border-gray-200/50 shadow-lg transition-all duration-500 ease-out overflow-hidden ${
           isMenuOpen ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0'
         }`}>
-          <div className="px-2 pt-2 pb-3 space-y-1">
+          <div className="px-4 pt-4 pb-6 space-y-2">
             <a
               href="#home"
-              className="block text-gray-800 hover:text-purple-600 hover:bg-gray-50 px-3 py-2 text-base font-medium rounded-md transition-all duration-300"
+              className="block text-gray-800 hover:text-white hover:bg-gradient-to-r from-purple-600 to-cyan-500 px-4 py-3 text-base font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg"
               onClick={() => setIsMenuOpen(false)}
             >
               PROASİST
             </a>
             <a
               href="#clients"
-              className="block text-gray-800 hover:text-purple-600 hover:bg-gray-50 px-3 py-2 text-base font-medium rounded-md transition-all duration-300"
+              className="block text-gray-800 hover:text-white hover:bg-gradient-to-r from-purple-600 to-cyan-500 px-4 py-3 text-base font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg"
               onClick={() => setIsMenuOpen(false)}
             >
               MÜŞTERİLERİMİZ
             </a>
             <a
               href="#partners"
-              className="block text-gray-800 hover:text-purple-600 hover:bg-gray-50 px-3 py-2 text-base font-medium rounded-md transition-all duration-300"
+              className="block text-gray-800 hover:text-white hover:bg-gradient-to-r from-purple-600 to-cyan-500 px-4 py-3 text-base font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg"
               onClick={() => setIsMenuOpen(false)}
             >
-              ÇÖZÜM ORTAKLARI BAŞVURU FORMU
+              ÇÖZÜM ORTAKLARI
             </a>
           </div>
         </div>

@@ -127,28 +127,33 @@ const StatsSection = () => {
   };
 
   return (
-    <section ref={sectionRef} className="py-16 md:py-24 bg-orange-500 relative overflow-hidden">
-      {/* Turkey Map Background */}
-      <div className="absolute inset-0 opacity-20">
-        <svg className="w-full h-full" viewBox="0 0 400 200" preserveAspectRatio="xMidYMid meet">
+    <section ref={sectionRef} className="py-20 md:py-32 bg-gradient-to-br from-orange-500 via-orange-400 to-orange-600 relative overflow-hidden">
+      {/* Turkey Map Background with animation */}
+      <div className="absolute inset-0 opacity-10">
+        <svg className="w-full h-full animate-pulse-slow" viewBox="0 0 400 200" preserveAspectRatio="xMidYMid meet">
           {/* Simplified Turkey Map Outline */}
           <path
             d="M 50 80 Q 60 70 80 75 T 120 80 T 160 85 T 200 90 T 240 88 T 280 85 T 320 80 T 350 75 L 360 90 L 350 110 L 340 130 L 320 140 L 300 145 L 280 140 L 260 135 L 240 130 L 220 125 L 200 120 L 180 115 L 160 110 L 140 105 L 120 100 L 100 95 L 80 90 L 60 85 Z"
-            fill="#1e3a8a"
-            stroke="#1e3a8a"
+            fill="white"
+            stroke="white"
             strokeWidth="2"
           />
         </svg>
       </div>
+      
+      {/* Decorative gradient circles */}
+      <div className="absolute top-0 right-0 w-96 h-96 bg-white/10 rounded-full blur-3xl"></div>
+      <div className="absolute bottom-0 left-0 w-96 h-96 bg-white/10 rounded-full blur-3xl"></div>
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className={`text-center mb-12 md:mb-16 ${isVisible ? 'animate-fade-in' : 'opacity-0'}`}>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
-            Türkiye'nin 81 İlinde
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-10">
+        <div className={`text-center mb-16 md:mb-20 ${isVisible ? 'animate-fade-in' : 'opacity-0'}`}>
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-display font-bold text-white mb-4 drop-shadow-lg">
+            Türkiye'nin <span className="text-yellow-200">81 İlinde</span>
           </h2>
-          <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-8">
+          <h3 className="text-2xl md:text-3xl lg:text-4xl font-display font-bold text-white mb-8 drop-shadow-md">
             İşinizi Yaşıyor ve Yaşatıyoruz
           </h3>
+          <div className="w-24 h-1 bg-white/50 mx-auto rounded-full"></div>
         </div>
 
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 md:gap-6">
@@ -160,31 +165,40 @@ const StatsSection = () => {
             return (
               <div
                 key={index}
-                className={`group relative bg-white/10 backdrop-blur-sm border-2 border-white/20 rounded-lg p-4 md:p-6 hover:bg-white/20 transition-all duration-500 overflow-hidden ${
+                className={`group relative bg-white/15 backdrop-blur-md border-2 border-white/30 rounded-2xl p-6 md:p-8 hover:bg-white/25 hover:border-white/50 transition-all duration-500 overflow-hidden hover-lift shadow-xl ${
                   isVisible ? 'animate-scale-in' : 'opacity-0'
                 }`}
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
+                {/* Glow effect on hover */}
+                <div className="absolute inset-0 bg-gradient-to-br from-white/0 to-white/0 group-hover:from-white/10 group-hover:to-white/5 transition-all duration-500 rounded-2xl"></div>
+                
                 {/* Icon */}
-                <div className="mb-3 flex justify-center text-white">
-                  <div className="w-10 h-10 md:w-12 md:h-12">
-                    {stat.icon}
+                <div className="mb-4 flex justify-center text-white relative z-10">
+                  <div className="w-12 h-12 md:w-16 md:h-16 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300">
+                    <div className="absolute inset-0 bg-white/20 rounded-full blur-md group-hover:bg-white/30 transition-all"></div>
+                    <div className="relative">
+                      {stat.icon}
+                    </div>
                   </div>
                 </div>
 
                 {/* Number */}
-                <div className={`font-bold text-white mb-2 text-center ${
+                <div className={`font-display font-extrabold text-white mb-3 text-center relative z-10 ${
                   isLargeNumber 
-                    ? 'text-lg md:text-xl lg:text-2xl xl:text-3xl' 
-                    : 'text-xl md:text-2xl lg:text-3xl xl:text-4xl'
+                    ? 'text-xl md:text-2xl lg:text-3xl xl:text-4xl' 
+                    : 'text-2xl md:text-3xl lg:text-4xl xl:text-5xl'
                 }`}>
-                  <div className="w-full break-all leading-tight" style={{ wordBreak: 'break-all' }}>
+                  <div className="w-full break-all leading-tight drop-shadow-lg" style={{ wordBreak: 'break-all' }}>
+                    {formattedNumber}
+                  </div>
+                  <div className="absolute inset-0 bg-gradient-to-b from-white to-white/50 bg-clip-text text-transparent blur-sm opacity-50 -z-10">
                     {formattedNumber}
                   </div>
                 </div>
 
                 {/* Label */}
-                <div className="text-[10px] md:text-xs lg:text-sm text-white font-medium uppercase tracking-wide text-center leading-tight min-h-[2.5rem] flex items-center justify-center">
+                <div className="text-[10px] md:text-xs lg:text-sm text-white/95 font-semibold uppercase tracking-wider text-center leading-tight min-h-[2.5rem] flex items-center justify-center relative z-10">
                   {stat.label}
                 </div>
               </div>

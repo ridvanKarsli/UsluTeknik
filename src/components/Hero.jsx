@@ -21,11 +21,12 @@ const Hero = () => {
   }, []);
 
   return (
-    <section id="home" className="pt-32 md:pt-36 relative overflow-hidden min-h-screen flex items-center">
+    <section id="home" className="pt-40 md:pt-44 relative overflow-hidden min-h-screen flex items-center">
       {/* Technical Background */}
       <div className="absolute inset-0 z-0">
-        {/* Base gradient */}
-        <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900"></div>
+        {/* Base gradient with enhanced colors */}
+        <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-purple-900/30 to-gray-900"></div>
+        <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent"></div>
         
         {/* Technical Circuit Panel Background */}
         <div className="absolute inset-0 opacity-40">
@@ -262,8 +263,11 @@ const Hero = () => {
             className={`mb-10 ${isVisible ? 'animate-scale-in' : 'opacity-0 scale-90'}`} 
             style={{ animationDelay: '0.4s', animationDuration: '1s' }}
           >
-            <h1 className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-white leading-tight mb-6 drop-shadow-2xl animate-pulse-glow">
-              Yaşayan Şirket
+            <h1 className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-display font-extrabold text-white leading-tight mb-6 drop-shadow-2xl relative">
+              <span className="relative z-10 bg-gradient-to-r from-white via-purple-100 to-cyan-100 bg-clip-text text-transparent animate-pulse-glow">
+                Yaşayan Şirket
+              </span>
+              <span className="absolute inset-0 bg-gradient-to-r from-purple-600 via-cyan-500 to-purple-600 bg-clip-text text-transparent blur-xl opacity-50 animate-pulse"></span>
             </h1>
           </div>
 
@@ -274,21 +278,26 @@ const Hero = () => {
           >
             <a
               href="#services"
-              className="inline-block border-2 border-white text-white px-8 py-4 rounded-md font-semibold text-lg hover:bg-white hover:text-gray-900 transition-all duration-300 backdrop-blur-sm bg-white/10 hover:scale-110 hover:shadow-2xl hover:shadow-orange-500/50 relative overflow-hidden group"
+              className="inline-block border-2 border-white/80 text-white px-10 py-5 rounded-xl font-display font-bold text-lg hover:bg-white hover:text-gray-900 transition-all duration-500 backdrop-blur-md bg-white/10 hover:scale-110 hover:shadow-2xl hover:shadow-purple-500/50 relative overflow-hidden group ripple"
             >
-              <span className="relative z-10">ProAsist'i Keşfet!</span>
-              <span className="absolute inset-0 bg-gradient-to-r from-orange-500 to-orange-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></span>
+              <span className="relative z-10 flex items-center space-x-2">
+                <span>ProAsist'i Keşfet!</span>
+                <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                </svg>
+              </span>
+              <span className="absolute inset-0 bg-gradient-to-r from-purple-600 via-cyan-500 to-purple-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></span>
+              <span className="absolute inset-0 bg-white/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
             </a>
           </div>
         </div>
       </div>
 
       {/* Scroll Indicator - Animated */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10">
-        <div className="animate-bounce">
-          <svg className="w-6 h-6 text-white opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-          </svg>
+      <div className="absolute bottom-12 left-1/2 transform -translate-x-1/2 z-10">
+        <div className="flex flex-col items-center space-y-2">
+          <div className="scroll-indicator text-white/60"></div>
+          <span className="text-xs text-white/60 uppercase tracking-wider font-medium animate-pulse">Kaydır</span>
         </div>
       </div>
     </section>
