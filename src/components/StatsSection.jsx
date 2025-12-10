@@ -88,31 +88,41 @@ const StatsSection = () => {
     if (!isVisible) return;
 
     const duration = 2000;
-    const steps = 60;
-    const stepDuration = duration / steps;
+    const startTime = Date.now();
+    let animationFrameId;
 
-    stats.forEach((stat, index) => {
-      let currentStep = 0;
-      const increment = stat.number / steps;
+    const animate = () => {
+      const elapsed = Date.now() - startTime;
+      const progress = Math.min(elapsed / duration, 1);
 
-      const timer = setInterval(() => {
-        currentStep++;
+      stats.forEach((stat, index) => {
+        const currentValue = Math.floor(stat.number * progress);
         setCounts(prev => ({
           ...prev,
-          [index]: Math.min(Math.floor(currentStep * increment), stat.number)
+          [index]: currentValue
         }));
+      });
 
-        if (currentStep >= steps) {
-          clearInterval(timer);
+      if (progress < 1) {
+        animationFrameId = requestAnimationFrame(animate);
+      } else {
+        // Ensure final values are set
+        stats.forEach((stat, index) => {
           setCounts(prev => ({
             ...prev,
             [index]: stat.number
           }));
-        }
-      }, stepDuration);
+        });
+      }
+    };
 
-      return () => clearInterval(timer);
-    });
+    animationFrameId = requestAnimationFrame(animate);
+
+    return () => {
+      if (animationFrameId) {
+        cancelAnimationFrame(animationFrameId);
+      }
+    };
   }, [isVisible]);
 
   const formatNumber = (num) => {

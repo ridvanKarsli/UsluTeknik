@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState, useMemo } from 'react';
 
 const HandsSection = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -21,6 +21,24 @@ const HandsSection = () => {
     return () => observer.disconnect();
   }, []);
 
+  // Memoize SVG data to prevent re-renders
+  const wireData = useMemo(() => {
+    return Array.from({ length: 15 }, (_, i) => ({
+      x1: Math.random() * 400,
+      y1: Math.random() * 300,
+      x2: Math.random() * 400,
+      y2: Math.random() * 300,
+      color: ['#3b82f6', '#ffffff', '#10b981'][i % 3],
+    }));
+  }, []);
+
+  const pointData = useMemo(() => {
+    return Array.from({ length: 10 }, (_, i) => ({
+      cx: Math.random() * 400,
+      cy: Math.random() * 300,
+    }));
+  }, []);
+
   return (
     <section id="hands" ref={sectionRef} className="relative overflow-hidden min-h-[600px] md:min-h-[700px] flex items-center">
       {/* Technical Background - Circuit Panel */}
@@ -40,42 +58,31 @@ const HandsSection = () => {
             </defs>
             <rect width="100%" height="100%" fill="url(#circuit)"/>
             
-            {/* Wires */}
-            {[...Array(30)].map((_, i) => {
-              const x1 = Math.random() * 400;
-              const y1 = Math.random() * 300;
-              const x2 = x1 + (Math.random() - 0.5) * 100;
-              const y2 = y1 + (Math.random() - 0.5) * 100;
-              const colors = ['#3b82f6', '#ffffff', '#fbbf24', '#ef4444', '#10b981'];
-              return (
-                <line
-                  key={i}
-                  x1={x1}
-                  y1={y1}
-                  x2={x2}
-                  y2={y2}
-                  stroke={colors[Math.floor(Math.random() * colors.length)]}
-                  strokeWidth="2"
-                  opacity="0.4"
-                />
-              );
-            })}
+            {/* Wires - Optimized */}
+            {wireData.map((wire, i) => (
+              <line
+                key={i}
+                x1={wire.x1}
+                y1={wire.y1}
+                x2={wire.x2}
+                y2={wire.y2}
+                stroke={wire.color}
+                strokeWidth="2"
+                opacity="0.4"
+              />
+            ))}
             
-            {/* Connection points */}
-            {[...Array(20)].map((_, i) => {
-              const cx = Math.random() * 400;
-              const cy = Math.random() * 300;
-              return (
-                <circle
-                  key={i}
-                  cx={cx}
-                  cy={cy}
-                  r="3"
-                  fill="#3b82f6"
-                  opacity="0.6"
-                />
-              );
-            })}
+            {/* Connection points - Optimized */}
+            {pointData.map((point, i) => (
+              <circle
+                key={i}
+                cx={point.cx}
+                cy={point.cy}
+                r="3"
+                fill="#3b82f6"
+                opacity="0.6"
+              />
+            ))}
           </svg>
         </div>
       </div>

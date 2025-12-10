@@ -82,35 +82,32 @@ const Navbar = () => {
                 <span className="relative z-10">ANA SAYFA</span>
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-800 to-blue-700 group-hover:w-full transition-all duration-300"></span>
               </a>
+              <a href="#about" className="relative text-gray-800 hover:text-blue-800 font-semibold text-sm uppercase tracking-wide transition-all duration-300 group">
+                <span className="relative z-10">HAKKIMIZDA</span>
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-800 to-blue-700 group-hover:w-full transition-all duration-300"></span>
+              </a>
+              <a href="#services" className="relative text-gray-800 hover:text-blue-800 font-semibold text-sm uppercase tracking-wide transition-all duration-300 group">
+                <span className="relative z-10">HİZMETLERİMİZ</span>
+                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-800 to-blue-700 group-hover:w-full transition-all duration-300"></span>
+              </a>
               <a href="#clients" className="relative text-gray-800 hover:text-blue-800 font-semibold text-sm uppercase tracking-wide transition-all duration-300 group">
                 <span className="relative z-10">MÜŞTERİLERİMİZ</span>
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-800 to-blue-700 group-hover:w-full transition-all duration-300"></span>
               </a>
-              <a href="#partners" className="relative text-gray-800 hover:text-blue-800 font-semibold text-sm uppercase tracking-wide transition-all duration-300 group">
-                <span className="relative z-10">ÇÖZÜM ORTAKLARI</span>
+              <a href="#contact" className="relative text-gray-800 hover:text-blue-800 font-semibold text-sm uppercase tracking-wide transition-all duration-300 group">
+                <span className="relative z-10">İLETİŞİM</span>
                 <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-800 to-blue-700 group-hover:w-full transition-all duration-300"></span>
               </a>
             </div>
 
-            {/* Right Side - Search & Omega Grup */}
-            <div className="hidden lg:flex lg:items-center lg:space-x-4">
+            {/* Right Side - Search */}
+            <div className="hidden lg:flex lg:items-center">
               <button className="relative text-gray-600 hover:text-blue-800 transition-all duration-300 p-2 rounded-lg hover:bg-blue-50 group">
                 <svg className="w-5 h-5 group-hover:scale-110 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                 </svg>
                 <span className="absolute top-1 right-1 w-2 h-2 bg-blue-600 rounded-full opacity-0 group-hover:opacity-100 transition-opacity animate-pulse"></span>
               </button>
-              
-              {/* İletişim Butonu */}
-              <a href="#contact" className="group flex items-center space-x-2 bg-gradient-to-r from-blue-800 via-blue-700 to-blue-600 px-5 py-2.5 rounded-lg shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 overflow-hidden relative">
-                <div className="absolute inset-0 bg-gradient-to-r from-blue-900 to-blue-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                <svg className="w-5 h-5 text-white relative z-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                </svg>
-                <div className="text-white relative z-10">
-                  <div className="text-xs font-bold tracking-wide">İLETİŞİM</div>
-                </div>
-              </a>
             </div>
 
             {/* Mobile menu button */}
@@ -145,21 +142,35 @@ const Navbar = () => {
               className="block text-gray-800 hover:text-white hover:bg-gradient-to-r from-blue-800 to-blue-700 px-4 py-3 text-base font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg"
               onClick={() => setIsMenuOpen(false)}
             >
-              ANA SAYFA
+              Ana Sayfa
+            </a>
+            <a
+              href="#about"
+              className="block text-gray-800 hover:text-white hover:bg-gradient-to-r from-blue-800 to-blue-700 px-4 py-3 text-base font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Hakkımızda
+            </a>
+            <a
+              href="#services"
+              className="block text-gray-800 hover:text-white hover:bg-gradient-to-r from-blue-800 to-blue-700 px-4 py-3 text-base font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Hizmetlerimiz
             </a>
             <a
               href="#clients"
               className="block text-gray-800 hover:text-white hover:bg-gradient-to-r from-blue-800 to-blue-700 px-4 py-3 text-base font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg"
               onClick={() => setIsMenuOpen(false)}
             >
-              MÜŞTERİLERİMİZ
+              Müşterilerimiz
             </a>
             <a
-              href="#partners"
+              href="#contact"
               className="block text-gray-800 hover:text-white hover:bg-gradient-to-r from-blue-800 to-blue-700 px-4 py-3 text-base font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg"
               onClick={() => setIsMenuOpen(false)}
             >
-              ÇÖZÜM ORTAKLARI
+              İletişim
             </a>
           </div>
         </div>

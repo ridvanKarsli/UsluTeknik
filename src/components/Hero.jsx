@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useMemo, useCallback } from 'react';
 
 const Hero = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -8,16 +8,66 @@ const Hero = () => {
     setIsVisible(true);
   }, []);
 
+  // Throttle mouse move for better performance
   useEffect(() => {
+    let ticking = false;
     const handleMouseMove = (e) => {
-      setMousePosition({
-        x: (e.clientX / window.innerWidth - 0.5) * 20,
-        y: (e.clientY / window.innerHeight - 0.5) * 20,
-      });
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          setMousePosition({
+            x: (e.clientX / window.innerWidth - 0.5) * 20,
+            y: (e.clientY / window.innerHeight - 0.5) * 20,
+          });
+          ticking = false;
+        });
+        ticking = true;
+      }
     };
 
-    window.addEventListener('mousemove', handleMouseMove);
+    window.addEventListener('mousemove', handleMouseMove, { passive: true });
     return () => window.removeEventListener('mousemove', handleMouseMove);
+  }, []);
+
+  // Memoize random values to prevent re-renders
+  const wireData = useMemo(() => {
+    return Array.from({ length: 10 }, (_, i) => ({
+      x1: Math.random() * 1200,
+      y1: Math.random() * 800,
+      x2: Math.random() * 1200,
+      y2: Math.random() * 800,
+      color: ['#3b82f6', '#ffffff', '#10b981'][i % 3],
+      duration: 2 + Math.random() * 2,
+      delay: i * 0.1,
+    }));
+  }, []);
+
+  const pointData = useMemo(() => {
+    return Array.from({ length: 15 }, (_, i) => ({
+      cx: Math.random() * 1200,
+      cy: Math.random() * 800,
+      duration: 1.5 + Math.random() * 1,
+      delay: i * 0.1,
+    }));
+  }, []);
+
+  const networkData = useMemo(() => {
+    return Array.from({ length: 8 }, (_, i) => ({
+      x1: Math.random() * 100,
+      y1: Math.random() * 100,
+      x2: Math.random() * 100,
+      y2: Math.random() * 100,
+      duration: 2 + Math.random() * 2,
+      delay: i * 0.1,
+    }));
+  }, []);
+
+  const particleData = useMemo(() => {
+    return Array.from({ length: 10 }, (_, i) => ({
+      left: Math.random() * 100,
+      top: Math.random() * 100,
+      delay: i * 0.2,
+      duration: 3 + Math.random() * 2,
+    }));
   }, []);
 
   return (
@@ -47,65 +97,54 @@ const Hero = () => {
             {/* Circuit board pattern */}
             <rect width="100%" height="100%" fill="url(#circuitPattern)"/>
             
-            {/* Electrical wires */}
-            {[...Array(25)].map((_, i) => {
-              const x1 = Math.random() * 1200;
-              const y1 = Math.random() * 800;
-              const x2 = x1 + (Math.random() - 0.5) * 300;
-              const y2 = y1 + (Math.random() - 0.5) * 300;
-              const colors = ['#3b82f6', '#ffffff', '#fbbf24', '#ef4444', '#10b981'];
-              return (
-                <line
-                  key={`wire-${i}`}
-                  x1={x1}
-                  y1={y1}
-                  x2={x2}
-                  y2={y2}
-                  stroke={colors[Math.floor(Math.random() * colors.length)]}
-                  strokeWidth="2"
-                  opacity="0.4"
-                >
-                  <animate
-                    attributeName="opacity"
-                    values="0.2;0.6;0.2"
-                    dur={`${2 + Math.random() * 2}s`}
-                    repeatCount="indefinite"
-                    begin={`${i * 0.1}s`}
-                  />
-                </line>
-              );
-            })}
+            {/* Electrical wires - Optimized */}
+            {wireData.map((wire, i) => (
+              <line
+                key={`wire-${i}`}
+                x1={wire.x1}
+                y1={wire.y1}
+                x2={wire.x2}
+                y2={wire.y2}
+                stroke={wire.color}
+                strokeWidth="2"
+                opacity="0.4"
+              >
+                <animate
+                  attributeName="opacity"
+                  values="0.2;0.6;0.2"
+                  dur={`${wire.duration}s`}
+                  repeatCount="indefinite"
+                  begin={`${wire.delay}s`}
+                />
+              </line>
+            ))}
             
-            {/* Connection points */}
-            {[...Array(40)].map((_, i) => {
-              const cx = Math.random() * 1200;
-              const cy = Math.random() * 800;
-              return (
-                <circle
-                  key={`point-${i}`}
-                  cx={cx}
-                  cy={cy}
-                  r="4"
-                  fill="#3b82f6"
-                  opacity="0.6"
-                >
-                  <animate
-                    attributeName="r"
-                    values="3;6;3"
-                    dur={`${1.5 + Math.random() * 1}s`}
-                    repeatCount="indefinite"
-                    begin={`${i * 0.1}s`}
-                  />
-                  <animate
-                    attributeName="opacity"
-                    values="0.3;0.8;0.3"
-                    dur={`${2 + Math.random() * 1}s`}
-                    repeatCount="indefinite"
-                    begin={`${i * 0.15}s`}
-                  />
-                </circle>
-              );
-            })}
+            {/* Connection points - Optimized */}
+            {pointData.map((point, i) => (
+              <circle
+                key={`point-${i}`}
+                cx={point.cx}
+                cy={point.cy}
+                r="4"
+                fill="#3b82f6"
+                opacity="0.6"
+              >
+                <animate
+                  attributeName="r"
+                  values="3;6;3"
+                  dur={`${point.duration}s`}
+                  repeatCount="indefinite"
+                  begin={`${point.delay}s`}
+                />
+                <animate
+                  attributeName="opacity"
+                  values="0.3;0.8;0.3"
+                  dur={`${point.duration + 0.5}s`}
+                  repeatCount="indefinite"
+                  begin={`${point.delay + 0.05}s`}
+                />
+              </circle>
+            ))}
             
             {/* Electrical panels */}
             {[...Array(8)].map((_, i) => {
@@ -131,12 +170,12 @@ const Hero = () => {
               );
             })}
             
-            {/* Mechanical gears */}
-            {[...Array(6)].map((_, i) => {
+            {/* Mechanical gears - Reduced */}
+            {[...Array(3)].map((_, i) => {
               const cx = 200 + (i % 3) * 400;
               const cy = 150 + Math.floor(i / 3) * 300;
               return (
-                <g key={`gear-${i}`} opacity="0.2">
+                <g key={`gear-${i}`} opacity="0.2" style={{ willChange: 'transform' }}>
                   <circle cx={cx} cy={cy} r="40" fill="none" stroke="#F7931E" strokeWidth="3">
                     <animateTransform
                       attributeName="transform"
@@ -147,25 +186,6 @@ const Hero = () => {
                     />
                   </circle>
                   <circle cx={cx} cy={cy} r="15" fill="#F7931E" opacity="0.5"/>
-                  {/* Gear teeth */}
-                  {[...Array(8)].map((_, j) => {
-                    const angle = (j * 45) * Math.PI / 180;
-                    const x1 = cx + Math.cos(angle) * 35;
-                    const y1 = cy + Math.sin(angle) * 35;
-                    const x2 = cx + Math.cos(angle) * 45;
-                    const y2 = cy + Math.sin(angle) * 45;
-                    return (
-                      <line
-                        key={`tooth-${j}`}
-                        x1={x1}
-                        y1={y1}
-                        x2={x2}
-                        y2={y2}
-                        stroke="#F7931E"
-                        strokeWidth="2"
-                      />
-                    );
-                  })}
                 </g>
               );
             })}
@@ -190,46 +210,41 @@ const Hero = () => {
               </stop>
             </linearGradient>
           </defs>
-          {/* Animated Network lines */}
-          {[...Array(15)].map((_, i) => {
-            const x1 = Math.random() * 100;
-            const y1 = Math.random() * 100;
-            const x2 = Math.random() * 100;
-            const y2 = Math.random() * 100;
-            return (
-              <line
-                key={i}
-                x1={`${x1}%`}
-                y1={`${y1}%`}
-                x2={`${x2}%`}
-                y2={`${y2}%`}
-                stroke="url(#networkGradient)"
-                strokeWidth="2"
-                opacity="0.4"
-              >
-                <animate
-                  attributeName="opacity"
-                  values="0.2;0.6;0.2"
-                  dur={`${2 + Math.random() * 2}s`}
-                  repeatCount="indefinite"
-                  begin={`${i * 0.1}s`}
-                />
-              </line>
-            );
-          })}
+          {/* Animated Network lines - Optimized */}
+          {networkData.map((net, i) => (
+            <line
+              key={i}
+              x1={`${net.x1}%`}
+              y1={`${net.y1}%`}
+              x2={`${net.x2}%`}
+              y2={`${net.y2}%`}
+              stroke="url(#networkGradient)"
+              strokeWidth="2"
+              opacity="0.4"
+            >
+              <animate
+                attributeName="opacity"
+                values="0.2;0.6;0.2"
+                dur={`${net.duration}s`}
+                repeatCount="indefinite"
+                begin={`${net.delay}s`}
+              />
+            </line>
+          ))}
         </svg>
 
-        {/* Floating technical particles */}
-        <div className="absolute inset-0 overflow-hidden" style={{ zIndex: 1 }}>
-          {[...Array(20)].map((_, i) => (
+        {/* Floating technical particles - Optimized */}
+        <div className="absolute inset-0 overflow-hidden" style={{ zIndex: 1, willChange: 'transform' }}>
+          {particleData.map((particle, i) => (
             <div
               key={i}
               className="absolute w-2 h-2 bg-blue-600 rounded-full opacity-30 animate-float"
               style={{
-                left: `${Math.random() * 100}%`,
-                top: `${Math.random() * 100}%`,
-                animationDelay: `${i * 0.2}s`,
-                animationDuration: `${3 + Math.random() * 2}s`,
+                left: `${particle.left}%`,
+                top: `${particle.top}%`,
+                animationDelay: `${particle.delay}s`,
+                animationDuration: `${particle.duration}s`,
+                willChange: 'transform',
               }}
             />
           ))}
@@ -243,7 +258,8 @@ const Hero = () => {
       <div 
         className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32 lg:py-40 w-full transition-transform duration-300"
         style={{
-          transform: `translate(${mousePosition.x * 0.02}px, ${mousePosition.y * 0.02}px)`,
+          transform: `translate3d(${mousePosition.x * 0.02}px, ${mousePosition.y * 0.02}px, 0)`,
+          willChange: 'transform',
         }}
       >
         <div className={`text-center ${isVisible ? 'animate-fade-in' : 'opacity-0'}`}>
