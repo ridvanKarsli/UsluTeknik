@@ -42,10 +42,10 @@ const ServicesSection = () => {
                 Elektrik olmazsa, mekanik alt yapı teklerse, o şirkette tüm sistem ve yaşam durur. Ufak gibi görünen problemler, işleri ve yaşamı sekteye uğratabilir, büyük risklere yol açabilir, binlerce insanın hayatını olumsuz şekilde etkileyebilir.
               </p>
               <p className="relative pl-4 border-l-2 border-yellow-200/50 hover:border-yellow-200 transition-colors duration-300 font-medium">
-                ProAsist olarak görevimiz, şirketlerin teknik alt yapılarını sürekli güçlendirerek, yaşamlarını kesintisiz sürdürmelerini sağlamak.
+                Uslu Teknik olarak görevimiz, müşterilerimizin teknik altyapılarını güvenli ve verimli şekilde çalışır durumda tutmak.
               </p>
               <p className="relative pl-4 border-l-2 border-white/30 hover:border-white/60 transition-colors duration-300">
-                Biz, sadece teknik hizmet işinde değil, aynı zamanda <strong className="text-yellow-200">Yaşam Mühendisliği</strong> işindeyiz. Sadece, günü kurtarmıyor, aynı zamanda ihtiyaçları öngörerek geleceği de kurguluyoruz.
+                Biz, sadece teknik hizmet sunmuyor, aynı zamanda <strong className="text-yellow-200">uzun vadeli çözümler</strong> üretiyoruz. Sadece acil müdahale yapmıyor, aynı zamanda önleyici bakım ve danışmanlık hizmetleriyle geleceği planlıyoruz.
               </p>
             </div>
           </div>
@@ -65,7 +65,7 @@ const ServicesSection = () => {
                 Mekanik Hizmetler
               </h3>
               <p className="text-white/95 text-base md:text-lg leading-relaxed">
-                ProAsist olarak, içinde yaşadığımız çevrenin korunmasını, soluduğumuz havanın sağlıklı, çalıştığımız alanın güvenli ve konforlu olmasını esas alır, klimadan yangın pompalarına, asansör ve yürüyen merdivenden drenaj ve ısı pompalarına kadar her türlü mekanik sistemin bakım onarımlarını yaparak şirketlerin, enerjiden tasarruf etmelerini, verimli çalışmalarını ve sürdürülebilirliklerini sağlarız.
+                Uslu Teknik olarak, içinde yaşadığımız çevrenin korunmasını, soluduğumuz havanın sağlıklı, çalıştığımız alanın güvenli ve konforlu olmasını esas alırız. Klima sistemlerinden yangın pompalarına, asansör ve yürüyen merdivenden drenaj ve ısı pompalarına kadar her türlü mekanik sistemin bakım ve onarımını yaparak müşterilerimizin enerjiden tasarruf etmelerini, verimli çalışmalarını ve sürdürülebilirliklerini sağlarız.
               </p>
             </div>
           </div>
@@ -84,7 +84,7 @@ const ServicesSection = () => {
                 Elektrik Hizmetleri
               </h3>
               <p className="text-white/95 text-base md:text-lg leading-relaxed">
-                ProAsist olarak, sürdürülebilirlik ve verimliliği, çalışanların can ve mal güvenliğini esas alır, orta, alçak gerilim ve zayıf akım sistemlerinin bakım onarım hizmetlerinden yasal kontrollere, cihazların izlenebilirliklerinden ölçüm ve testlerine kadar her türlü elektrik ile ilgili teknik ihtiyaçlara çözüm getirerek şirketlerin kesintisiz çalışmalarına imkan sağlarız.
+                Uslu Teknik olarak, sürdürülebilirlik ve verimliliği, çalışanların can ve mal güvenliğini esas alırız. Orta gerilim, alçak gerilim ve zayıf akım sistemlerinin bakım onarım hizmetlerinden yasal kontrollere, cihazların izlenebilirliklerinden ölçüm ve testlerine kadar her türlü elektrik ile ilgili teknik ihtiyaçlara çözüm getirerek müşterilerimizin kesintisiz çalışmalarına imkan sağlarız.
               </p>
             </div>
           </div>

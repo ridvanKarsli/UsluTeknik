@@ -90,7 +90,7 @@ const ClientsSection = () => {
               </p>
               <p className="relative pl-6 border-l-4 border-purple-500/30 hover:border-purple-500 transition-colors duration-300">
                 <span className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-purple-500 to-cyan-500 opacity-0 hover:opacity-100 transition-opacity"></span>
-                <strong className="text-gradient-purple font-bold">ProAsist</strong> olarak biz, müşterilerimizin sorunlarını, uykusuz gecelerini, endişelerini çok iyi biliyor, hissediyor ve anlıyoruz. Çünkü, her gün, tekrar tekrar, hem ofiste hem sahada, müşterilerimizin her türlü işlerini, sıkıntılarını, aksaklıklarını ve krizlerini, onlarla birlikte birebir yaşıyoruz.
+                <strong className="text-gradient-purple font-bold">Uslu Teknik</strong> olarak biz, müşterilerimizin teknik sorunlarını, endişelerini ve ihtiyaçlarını çok iyi anlıyoruz. Yılların deneyimi ve sektör bilgimizle, hem ofiste hem sahada, müşterilerimizin her türlü teknik ihtiyacına hızlı ve etkili çözümler sunuyoruz.
               </p>
             </div>
           </div>

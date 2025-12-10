@@ -35,12 +35,9 @@ const AboutSection = () => {
               isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
             }`}>
               <span className="bg-gradient-to-r from-gray-900 via-purple-600 to-gray-900 bg-clip-text text-transparent">
-                ProAsist Demek "
+                Uslu Teknik
               </span>
-              <strong className="text-gradient-purple">Yaşayan Şirket</strong>
-              <span className="bg-gradient-to-r from-gray-900 via-purple-600 to-gray-900 bg-clip-text text-transparent">
-                " Demektir
-              </span>
+              <strong className="text-gradient-purple"> Güvenilir Teknik Çözümler</strong>
             </h2>
             
             <div className={`space-y-8 text-lg md:text-xl text-gray-700 leading-relaxed text-left transition-all duration-1000 delay-300 ${
@@ -48,25 +45,25 @@ const AboutSection = () => {
             }`}>
               <p className="relative pl-6 border-l-4 border-purple-500/30 hover:border-purple-500 transition-colors duration-300">
                 <span className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-purple-500 to-cyan-500 opacity-0 hover:opacity-100 transition-opacity"></span>
-                Biz, sıradan bir teknik hizmet firması değiliz.<br />
-                Müşterilerimizin elektrikle ilgili sorunlarına çözüm getirmek için yola çıktık, elektrik uzmanlığımıza, mekanik yetkinliğimizi ve empati yeteneğimizi de ekleyerek, yüzlerce firmanın, her gün, yaşamını mümkün kılan kesintisiz bir güç kaynağına dönüştük.
+                Uslu Teknik olarak, elektrik ve mekanik alanında uzman kadromuzla, müşterilerimize kaliteli ve güvenilir teknik hizmetler sunuyoruz.<br />
+                Yılların deneyimi ve sektördeki bilgi birikimimizle, her türlü teknik ihtiyaca profesyonel çözümler üretiyoruz.
               </p>
               
               <p className="relative pl-6 border-l-4 border-purple-500/30 hover:border-purple-500 transition-colors duration-300">
                 <span className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-purple-500 to-cyan-500 opacity-0 hover:opacity-100 transition-opacity"></span>
-                <strong className="text-purple-600 font-semibold">ProAsist'te biz…</strong><br />
-                Şirketlerin de insanlar gibi 'yaşayan organizmalar' olduğuna inanırız.<br />
-                Tıpkı insanlar gibi, yaşadıkça ürettiklerini, katkı sağladıklarını, zamanla yorgun düşüp yıprandıklarında ise yaşamlarını sürdürebilmeleri için, bağışıklık sistemlerinin güçlendirilmeleri gerektiğini iyi biliriz.
+                <strong className="text-purple-600 font-semibold">Uslu Teknik olarak…</strong><br />
+                Müşteri memnuniyetini ön planda tutar, zamanında ve kaliteli hizmet anlayışımızla sektörde öncü olmayı hedefleriz.<br />
+                Teknik altyapıların sorunsuz çalışması için gerekli tüm bakım, onarım ve danışmanlık hizmetlerini sunuyoruz.
               </p>
               
               <p className="relative pl-6 border-l-4 border-orange-500/30 hover:border-orange-500 transition-colors duration-300">
                 <span className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-orange-500 to-purple-500 opacity-0 hover:opacity-100 transition-opacity"></span>
-                Çünkü, <strong className="text-gradient-purple font-semibold">"Yaşayan Şirket"</strong> demek… iş demek, üretim demek, istihdam, inovasyon, verimlilik, enerji, gelişim ve dinamizm demek…
+                Elektrik ve mekanik sistemlerinizin güvenli ve verimli çalışması için, <strong className="text-gradient-purple font-semibold">uzman ekibimiz</strong> ile yanınızdayız. İşletmelerinizin kesintisiz çalışması için gerekli tüm teknik desteği sağlıyoruz.
               </p>
               
               <p className="relative pl-6 border-l-4 border-cyan-500/30 hover:border-cyan-500 transition-colors duration-300">
                 <span className="absolute left-0 top-0 bottom-0 w-1 bg-gradient-to-b from-cyan-500 to-purple-500 opacity-0 hover:opacity-100 transition-opacity"></span>
-                <strong className="text-gradient-purple font-semibold">"Yaşayan Şirket"</strong> demek… emek demek, kazanç demek, gelecek demek, gelişen bir sektör ve büyüyen bir ekonomi demek…
+                <strong className="text-gradient-purple font-semibold">7/24 destek</strong> hizmetimizle, acil durumlarınızda hızlı müdahale sağlıyoruz. Müşterilerimizin teknik ihtiyaçlarını karşılamak için her zaman hazırız.
               </p>
             </div>
           </div>

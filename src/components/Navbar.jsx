@@ -49,9 +49,9 @@ const Navbar = () => {
               </div>
               <div>
                 <div className="text-xl md:text-2xl font-display font-bold bg-gradient-to-r from-purple-600 via-purple-500 to-cyan-600 bg-clip-text text-transparent group-hover:from-purple-700 group-hover:to-cyan-700 transition-all duration-300">
-                  PROASİST
+                  USLU TEKNİK
                 </div>
-                <div className="text-[10px] md:text-xs font-medium text-gray-600 uppercase tracking-wider">TEKNİK HİZMETLER</div>
+                <div className="text-[10px] md:text-xs font-medium text-gray-600 uppercase tracking-wider">ELEKTRİK & MEKANİK</div>
               </div>
             </div>
 
@@ -101,18 +101,14 @@ const Navbar = () => {
                 <span className="absolute top-1 right-1 w-2 h-2 bg-cyan-400 rounded-full opacity-0 group-hover:opacity-100 transition-opacity animate-pulse"></span>
               </button>
               
-              {/* Omega Grup Logo */}
-              <a href="#" className="group flex items-center space-x-3 bg-gradient-to-r from-blue-900 via-blue-800 to-blue-900 px-5 py-2.5 rounded-lg shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 overflow-hidden relative">
-                <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-cyan-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                <div className="flex space-x-1.5 relative z-10">
-                  <div className="w-3 h-3 bg-red-500 rounded-sm shadow-sm animate-pulse"></div>
-                  <div className="w-3 h-3 bg-orange-500 rounded-sm shadow-sm animate-pulse" style={{ animationDelay: '0.1s' }}></div>
-                  <div className="w-3 h-3 bg-blue-400 rounded-sm shadow-sm animate-pulse" style={{ animationDelay: '0.2s' }}></div>
-                  <div className="w-3 h-3 bg-cyan-500 rounded-sm shadow-sm animate-pulse" style={{ animationDelay: '0.3s' }}></div>
-                </div>
+              {/* İletişim Butonu */}
+              <a href="#contact" className="group flex items-center space-x-2 bg-gradient-to-r from-purple-600 via-purple-500 to-cyan-500 px-5 py-2.5 rounded-lg shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 overflow-hidden relative">
+                <div className="absolute inset-0 bg-gradient-to-r from-purple-700 to-cyan-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <svg className="w-5 h-5 text-white relative z-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
                 <div className="text-white relative z-10">
-                  <div className="text-xs font-bold tracking-wide">OMEGA GRUP</div>
-                  <div className="text-[10px] opacity-90">ÇÖZÜM PLATFORMU</div>
+                  <div className="text-xs font-bold tracking-wide">İLETİŞİM</div>
                 </div>
               </a>
             </div>
@@ -149,7 +145,7 @@ const Navbar = () => {
               className="block text-gray-800 hover:text-white hover:bg-gradient-to-r from-purple-600 to-cyan-500 px-4 py-3 text-base font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg"
               onClick={() => setIsMenuOpen(false)}
             >
-              PROASİST
+              ANA SAYFA
             </a>
             <a
               href="#clients"

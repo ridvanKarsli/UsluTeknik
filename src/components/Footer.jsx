@@ -42,33 +42,33 @@ const Footer = () => {
                 </svg>
               </div>
               <div>
-                <h3 className="text-xl md:text-2xl font-display font-bold bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">ProAsist</h3>
-                <p className="text-xs text-gray-500 uppercase tracking-wider">Teknik Hizmetler</p>
+                <h3 className="text-xl md:text-2xl font-display font-bold bg-gradient-to-r from-purple-400 to-cyan-400 bg-clip-text text-transparent">Uslu Teknik</h3>
+                <p className="text-xs text-gray-500 uppercase tracking-wider">Elektrik & Mekanik</p>
               </div>
             </div>
             <p className="text-gray-400 mb-6 leading-relaxed text-sm md:text-base">
-              ProAsist Elektrik Mekanik Teknik Hizmetler San. ve Tic. A.Ş.<br />
-              Sultan Selim Mah. Yunus Emre Caddesi Topçu İş Merkezi No:1 Kat:4 D:10<br />
-              34415 4. Levent / Kağıthane / İSTANBUL
+              Uslu Teknik Elektrik ve Mekanik Teknik Hizmetler<br />
+              İstanbul, Türkiye<br />
+              Detaylı adres bilgisi için iletişime geçin
             </p>
             <div className="space-y-3 text-sm mb-6">
               <p className="text-gray-400 flex items-center">
                 <svg className="w-4 h-4 mr-2 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                 </svg>
-                Email: <a href="mailto:info@proasist.com.tr" className="text-white hover:text-purple-400 transition-colors ml-1">info@proasist.com.tr</a>
+                Email: <a href="mailto:info@usluteknik.com.tr" className="text-white hover:text-purple-400 transition-colors ml-1">info@usluteknik.com.tr</a>
               </p>
               <p className="text-gray-400 flex items-center">
                 <svg className="w-4 h-4 mr-2 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                 </svg>
-                Telefon: <a href="tel:4442890" className="text-white hover:text-purple-400 transition-colors ml-1">444 28 90</a>
+                Telefon: <a href="tel:+902121234567" className="text-white hover:text-purple-400 transition-colors ml-1">+90 (212) XXX XX XX</a>
               </p>
               <p className="text-gray-400 flex items-center">
                 <svg className="w-4 h-4 mr-2 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                 </svg>
-                Bülten: <a href="mailto:ebulten@proasist.com.tr" className="text-white hover:text-purple-400 transition-colors ml-1">ebulten@proasist.com.tr</a>
+                Destek: <a href="mailto:destek@usluteknik.com.tr" className="text-white hover:text-purple-400 transition-colors ml-1">destek@usluteknik.com.tr</a>
               </p>
             </div>
             
@@ -116,7 +116,7 @@ const Footer = () => {
         <div className="border-t border-gray-800/50 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-gray-400 text-sm mb-4 md:mb-0">
-              © {currentYear} <span className="text-gradient-purple font-semibold">ProAsist</span> - Tüm hakları saklıdır.
+              © {currentYear} <span className="text-gradient-purple font-semibold">Uslu Teknik</span> - Tüm hakları saklıdır.
             </p>
             <div className="flex items-center space-x-2 text-gray-500 text-xs">
               <span>Made with</span>

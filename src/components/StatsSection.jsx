@@ -184,7 +184,7 @@ const StatsSection = () => {
                 </div>
 
                 {/* Number */}
-                <div className={`font-display font-extrabold text-white mb-3 text-center relative z-10 ${
+                <div className={`font-sans font-extrabold text-white mb-3 text-center relative z-10 ${
                   isLargeNumber 
                     ? 'text-xl md:text-2xl lg:text-3xl xl:text-4xl' 
                     : 'text-2xl md:text-3xl lg:text-4xl xl:text-5xl'

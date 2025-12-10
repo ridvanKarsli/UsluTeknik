@@ -60,8 +60,8 @@ const ContactSection = () => {
       title: 'Adres',
       content: (
         <>
-          Teknoloji Mahallesi, İnovasyon Caddesi<br />
-          No: 123, İstanbul, Türkiye
+          İstanbul, Türkiye<br />
+          Detaylı adres bilgisi için iletişime geçin
         </>
       ),
       gradient: 'from-blue-500 to-cyan-500',
@@ -90,8 +90,8 @@ const ContactSection = () => {
       title: 'E-posta',
       content: (
         <>
-          <a href="mailto:info@proasist.com.tr" className="hover:text-cyan-600 transition-colors">info@proasist.com.tr</a><br />
-          <a href="mailto:destek@proasist.com.tr" className="hover:text-cyan-600 transition-colors">destek@proasist.com.tr</a>
+          <a href="mailto:info@usluteknik.com.tr" className="hover:text-cyan-600 transition-colors">info@usluteknik.com.tr</a><br />
+          <a href="mailto:destek@usluteknik.com.tr" className="hover:text-cyan-600 transition-colors">destek@usluteknik.com.tr</a>
         </>
       ),
       gradient: 'from-blue-500 to-blue-600',

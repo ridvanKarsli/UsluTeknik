@@ -253,8 +253,8 @@ const Hero = () => {
             style={{ animationDelay: '0.2s', animationDuration: '0.8s' }}
           >
             <p className="text-xl md:text-2xl lg:text-3xl text-white font-light italic drop-shadow-lg">
-              "Yaşayan Şirket"lerin, empati ile<br />
-              çözüm üreten güç kaynağı
+              Elektrik ve mekanik alanında<br />
+              güvenilir teknik çözüm ortağınız
             </p>
           </div>
 
@@ -265,7 +265,7 @@ const Hero = () => {
           >
             <h1 className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-display font-extrabold text-white leading-tight mb-6 drop-shadow-2xl relative">
               <span className="relative z-10 bg-gradient-to-r from-white via-purple-100 to-cyan-100 bg-clip-text text-transparent animate-pulse-glow">
-                Yaşayan Şirket
+                Uslu Teknik
               </span>
               <span className="absolute inset-0 bg-gradient-to-r from-purple-600 via-cyan-500 to-purple-600 bg-clip-text text-transparent blur-xl opacity-50 animate-pulse"></span>
             </h1>
@@ -281,7 +281,7 @@ const Hero = () => {
               className="inline-block border-2 border-white/80 text-white px-10 py-5 rounded-xl font-display font-bold text-lg hover:bg-white hover:text-gray-900 transition-all duration-500 backdrop-blur-md bg-white/10 hover:scale-110 hover:shadow-2xl hover:shadow-purple-500/50 relative overflow-hidden group ripple"
             >
               <span className="relative z-10 flex items-center space-x-2">
-                <span>ProAsist'i Keşfet!</span>
+                <span>Hizmetlerimizi Keşfedin</span>
                 <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                 </svg>
